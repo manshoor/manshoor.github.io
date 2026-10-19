@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manshoor Ahmad Siddiqui – Projects</title>
+  <meta name="description" content="Screenshots and demos of my own products and tools.">
+  <style>
+    :root {
+      --bg: #ffffff; --text: #1d1d1f; --muted: #555b63; --accent: #1f3a5f; --rule: #d5dbe3; --chip: #eef2f7;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #111418; --text: #e7e9ec; --muted: #a2a9b3; --accent: #8fb3e0; --rule: #2c333d; --chip: #1c222a; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text);
+      font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Calibri, Roboto, sans-serif; }
+    main { max-width: 860px; margin: 0 auto; padding: 48px 16px 64px; }
+    a { color: var(--accent); }
+    h1 { margin: 0; font-size: 2rem; color: var(--accent); letter-spacing: 0.02em; }
+    .headline { margin: 4px 0 8px; font-weight: 600; font-size: 1.1rem; }
+    .contact, .location { margin: 2px 0; color: var(--muted); }
+    .contact { display: flex; flex-wrap: wrap; gap: 0 8px; overflow-wrap: anywhere; }
+    .downloads { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 8px; }
+    .button { padding: 8px 14px; border-radius: 6px; background: var(--chip); text-decoration: none;
+      font-weight: 600; font-size: 0.95rem; }
+    h2 { margin: 36px 0 12px; padding-bottom: 4px; border-bottom: 1px solid var(--accent);
+      color: var(--accent); font-size: 1.15rem; }
+    h3 { margin: 0; font-size: 1rem; }
+    .role { margin-top: 18px; }
+    .role header { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 16px; }
+    .dates { font-weight: 600; white-space: nowrap; }
+    .meta { margin: 2px 0; color: var(--muted); }
+    ul { margin: 6px 0 0; padding-left: 20px; }
+    li { margin: 3px 0; }
+    .skills { margin: 0; }
+    .skills div { margin: 6px 0; }
+    .skills dt { display: inline; font-weight: 600; }
+    .skills dt::after { content: ": "; }
+    .skills dd { display: inline; margin: 0; }
+    footer { margin-top: 48px; color: var(--muted); font-size: 0.85rem; }
+    @media print {
+      .downloads, footer { display: none; }
+      main { padding: 0; }
+    }
+    /* Projects page */
+    .nav { margin: 8px 0 0; }
+    .project { margin-top: 36px; }
+    .project header { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 16px; align-items: baseline; }
+    .links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 6px 0 0; }
+    .note { margin: 6px 0 0; color: var(--muted); font-size: 0.9rem; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 16px; margin: 14px 0 0; padding: 0; list-style: none; }
+    .gallery figure { margin: 0; }
+    .gallery a { display: block; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; background: var(--chip); }
+    .gallery img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; }
+    .gallery figcaption { margin: 6px 0 0; color: var(--muted); font-size: 0.85rem; line-height: 1.35; }
+    .videos { display: flex; flex-wrap: wrap; gap: 16px; margin: 14px 0 0; }
+    .video { aspect-ratio: 16 / 9; width: 100%; max-width: 720px; border: 0; border-radius: 6px; background: #000; }
+    .video.short { aspect-ratio: 9 / 16; width: 280px; }
+    video.video { aspect-ratio: auto; width: auto; max-width: 100%; height: 420px; }
+    dialog.lightbox { max-width: min(96vw, 1600px); padding: 0; border: 0; border-radius: 8px; background: var(--bg); }
+    dialog.lightbox::backdrop { background: rgba(0, 0, 0, 0.75); }
+    dialog.lightbox img { display: block; max-width: 100%; max-height: 90vh; }
+    dialog.lightbox p { margin: 0; padding: 8px 12px; color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Projects</h1>
+      <p class="headline">Manshoor Ahmad Siddiqui</p>
+      <p class="nav"><a href="index.html">← CV</a></p>
+      <p>Screenshots and demos of the products I lead at Strategic Marketers, my own products and my developer tools. The employer products are live SaaS apps shown from a staff account; my own tools are on github.com/manshoor. Client work is described in the project portfolio PDF.</p>
+    </header>
+
+    <section class="project" id="autobay">
+      <header>
+        <h2>AutoBay (autobay.io)</h2>
+        <span class="meta">Own product · TuringEdge · pre-launch · 2026</span>
+      </header>
+      <p>Multi-tenant SaaS ERP for UAE / GCC automotive workshops, heavy equipment and construction logistics: jobs, parts, vendors, invoicing, accounting, banking, HR, attendance, customer portal, white-label, WhatsApp notifications and an AI add-on. Arabic RTL from day one. 25 modules, 120+ tenant tables isolated with PostgreSQL row-level security, 280+ automated test files, release gates and backup and restore checks.</p>
+      <p class="meta"><strong>Stack:</strong> Next.js App Router, Express, TypeScript, Drizzle, PostgreSQL 16, Redis, BullMQ, Stripe Connect, WhatsApp Business API, Prometheus, Grafana, Docker</p>
+      <p class="links"><a href="https://autobay.io">autobay.io</a></p>
+      <p class="note">Dev tenant with sample data; customer names are fictional.</p>
+      
+      <ul class="gallery">
+        <li><figure>
+          <a href="images/autobay/01-dashboard.webp" data-caption="Owner dashboard: live jobs, bay utilisation, receivables aging and the sales pipeline"><img src="images/autobay/01-dashboard.webp" alt="Owner dashboard: live jobs, bay utilisation, receivables aging and the sales pipeline" loading="lazy"></a>
+          <figcaption>Owner dashboard: live jobs, bay utilisation, receivables aging and the sales pipeline</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/02-dashboard-ar.webp" data-caption="The same dashboard in Arabic: right-to-left layout from day one"><img src="images/autobay/02-dashboard-ar.webp" alt="The same dashboard in Arabic: right-to-left layout from day one" loading="lazy"></a>
+          <figcaption>The same dashboard in Arabic: right-to-left layout from day one</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/03-jobs.webp" data-caption="Workshop jobs by state, with priority and vehicle"><img src="images/autobay/03-jobs.webp" alt="Workshop jobs by state, with priority and vehicle" loading="lazy"></a>
+          <figcaption>Workshop jobs by state, with priority and vehicle</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/04-job-detail.webp" data-caption="Job detail"><img src="images/autobay/04-job-detail.webp" alt="Job detail" loading="lazy"></a>
+          <figcaption>Job detail</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/05-quotes.webp" data-caption="Quotes"><img src="images/autobay/05-quotes.webp" alt="Quotes" loading="lazy"></a>
+          <figcaption>Quotes</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/06-invoices.webp" data-caption="Invoices and payment status"><img src="images/autobay/06-invoices.webp" alt="Invoices and payment status" loading="lazy"></a>
+          <figcaption>Invoices and payment status</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/07-invoice-detail.webp" data-caption="Invoice detail"><img src="images/autobay/07-invoice-detail.webp" alt="Invoice detail" loading="lazy"></a>
+          <figcaption>Invoice detail</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/08-customers.webp" data-caption="Customers and their vehicles"><img src="images/autobay/08-customers.webp" alt="Customers and their vehicles" loading="lazy"></a>
+          <figcaption>Customers and their vehicles</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/09-parts.webp" data-caption="Parts"><img src="images/autobay/09-parts.webp" alt="Parts" loading="lazy"></a>
+          <figcaption>Parts</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/10-accounting.webp" data-caption="Double-entry accounting: journal entries"><img src="images/autobay/10-accounting.webp" alt="Double-entry accounting: journal entries" loading="lazy"></a>
+          <figcaption>Double-entry accounting: journal entries</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/11-banking.webp" data-caption="Bank accounts and reconciliation"><img src="images/autobay/11-banking.webp" alt="Bank accounts and reconciliation" loading="lazy"></a>
+          <figcaption>Bank accounts and reconciliation</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/12-attendance.webp" data-caption="Attendance records from biometric and geo-fenced check-ins"><img src="images/autobay/12-attendance.webp" alt="Attendance records from biometric and geo-fenced check-ins" loading="lazy"></a>
+          <figcaption>Attendance records from biometric and geo-fenced check-ins</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/13-equipment.webp" data-caption="Heavy equipment fleet and bookings"><img src="images/autobay/13-equipment.webp" alt="Heavy equipment fleet and bookings" loading="lazy"></a>
+          <figcaption>Heavy equipment fleet and bookings</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/14-hr.webp" data-caption="HR and payroll: employees"><img src="images/autobay/14-hr.webp" alt="HR and payroll: employees" loading="lazy"></a>
+          <figcaption>HR and payroll: employees</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/15-settings.webp" data-caption="Tenant settings and white-label branding"><img src="images/autobay/15-settings.webp" alt="Tenant settings and white-label branding" loading="lazy"></a>
+          <figcaption>Tenant settings and white-label branding</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/16-technician-mobile.webp" data-caption="Mechanic&#39;s mobile view: assigned jobs"><img src="images/autobay/16-technician-mobile.webp" alt="Mechanic&#39;s mobile view: assigned jobs" loading="lazy"></a>
+          <figcaption>Mechanic&#39;s mobile view: assigned jobs</figcaption>
+        </figure></li></ul>
+    </section>
+    <section class="project" id="ideolab">
+      <header>
+        <h2>IdeoLab (my.ideolab.ai)</h2>
+        <span class="meta">Engineer · 2026</span>
+      </header>
+      <p>Chat-driven platform that creates images, videos, presentations and social calendars. Built versioned prompt releases and structured Planner / Builder LLM contracts with validation and repair flows.</p>
+      <p class="meta"><strong>Stack:</strong> LangChain, LangGraph, Claude, Gemini, xAI, fal.ai, Qdrant vector search (RAG), RabbitMQ workers, Express, React, Supabase, AWS S3</p>
+      <p class="links"><a href="https://my.ideolab.ai">my.ideolab.ai</a><a href="https://www.youtube.com/shorts/LAXEhuVlIiM">Sample video made in IdeoLab (YouTube Short)</a></p>
+      
+      <div class="videos"><iframe class="video short" src="https://www.youtube.com/embed/LAXEhuVlIiM" title="IdeoLab (my.ideolab.ai): Sample video made in IdeoLab (YouTube Short)" allowfullscreen loading="lazy"></iframe></div>
+      <ul class="gallery">
+        <li><figure>
+          <a href="images/ideolab/01-home.webp" data-caption="Home: start a chat, or pick a ready-made lab or automation"><img src="images/ideolab/01-home.webp" alt="Home: start a chat, or pick a ready-made lab or automation" loading="lazy"></a>
+          <figcaption>Home: start a chat, or pick a ready-made lab or automation</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/03-website-builder.webp" data-caption="Website builder preview: a site generated for a sample business"><img src="images/ideolab/03-website-builder.webp" alt="Website builder preview: a site generated for a sample business" loading="lazy"></a>
+          <figcaption>Website builder preview: a site generated for a sample business</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/04-social-connections.webp" data-caption="Social connections: the channels the business publishes to"><img src="images/ideolab/04-social-connections.webp" alt="Social connections: the channels the business publishes to" loading="lazy"></a>
+          <figcaption>Social connections: the channels the business publishes to</figcaption>
+        </figure></li></ul>
+    </section>
+    <section class="project" id="viralvidz">
+      <header>
+        <h2>ViralVidz and Adviddy (my.viralvidz.ai)</h2>
+        <span class="meta">Senior developer · technical lead responsibilities since Nov 2019 · 2017-present</span>
+      </header>
+      <p>Technical lead for Adviddy and its successor ViralVidz: a template and AI video builder used by agencies, producing 2,000–2,800 renders a month. Cut render time from 20–30 minutes to about 3 minutes on a GPU server and reduced server load. Led the render-pipeline redesign connecting the PHP builder to the new React editor (Remotion on AWS Lambda): durable, retryable dispatch and ready callbacks; render watchdog and guarded recovery. Led the team that built S3 to CDN delivery, voice cloning and AI voiceover routing, and usage-based credit billing with audit reports.</p>
+      <p class="meta"><strong>Stack:</strong> PHP, JavaScript, MySQL, AWS S3 / CloudFront, FFmpeg, Sentry</p>
+      <p class="links"><a href="https://my.viralvidz.ai/login">my.viralvidz.ai (sign-in)</a><a href="https://my.adviddy.com/login">my.adviddy.com (previous version)</a></p>
+      
+      
+      <ul class="gallery">
+        <li><figure>
+          <a href="images/viralvidz/01-dashboard.webp" data-caption="Dashboard: the user&#39;s video projects and templates"><img src="images/viralvidz/01-dashboard.webp" alt="Dashboard: the user&#39;s video projects and templates" loading="lazy"></a>
+          <figcaption>Dashboard: the user&#39;s video projects and templates</figcaption>
+        </figure></li></ul>
+    </section>
+    <section class="project" id="reactvideoeditor">
+      <header>
+        <h2>React video editor</h2>
+        <span class="meta">Technical lead responsibilities · 2025-present</span>
+      </header>
+      <p>Web video editor with AI-generated content, music, voiceovers and overlays, rendered serverlessly; added Lambda render reporting.</p>
+      <p class="meta"><strong>Stack:</strong> Next.js, React, TypeScript, Remotion (Lambda, Player, Renderer), BullMQ, Redis, Sentry</p>
+      <p class="links"><a href="https://vidkahuna-videos.s3.amazonaws.com/e4010f3d9b650f0ece12128a3624162c.mp4">Video rendered by the editor (MP4)</a></p>
+      
+      <div class="videos"><video class="video" src="https://vidkahuna-videos.s3.amazonaws.com/e4010f3d9b650f0ece12128a3624162c.mp4" title="React video editor: Video rendered by the editor (MP4)" controls preload="metadata"></video></div>
+      <ul class="gallery">
+        <li><figure>
+          <a href="images/reactvideoeditor/01-editor.webp" data-caption="The editor: frame timeline, per-frame media settings and effects, and the AI voice-over script"><img src="images/reactvideoeditor/01-editor.webp" alt="The editor: frame timeline, per-frame media settings and effects, and the AI voice-over script" loading="lazy"></a>
+          <figcaption>The editor: frame timeline, per-frame media settings and effects, and the AI voice-over script</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/reactvideoeditor/02-create-media.webp" data-caption="Create Media: text-to-image, blend, image-to-video and text-to-video for a frame"><img src="images/reactvideoeditor/02-create-media.webp" alt="Create Media: text-to-image, blend, image-to-video and text-to-video for a frame" loading="lazy"></a>
+          <figcaption>Create Media: text-to-image, blend, image-to-video and text-to-video for a frame</figcaption>
+        </figure></li></ul>
+    </section>
+    <section class="project" id="easyaiengine">
+      <header>
+        <h2>Easy AI Engine (my.easyaiengine.com)</h2>
+        <span class="meta">Senior developer · technical lead responsibilities since Nov 2019 · 2016-present</span>
+      </header>
+      <p>All-in-one AI marketing app: a dashboard per business, analytics, and visual workflows that chain content generation and publishing steps.</p>
+      <p class="meta"><strong>Stack:</strong> PHP (CodeIgniter, Laravel), JavaScript, Vue, MySQL, Redis, Stripe, Playwright / Puppeteer, OpenAI</p>
+      <p class="links"><a href="https://my.easyaiengine.com">my.easyaiengine.com (sign-in)</a></p>
+      
+      
+      <ul class="gallery">
+        <li><figure>
+          <a href="images/easyaiengine/01-dashboard.webp" data-caption="Account dashboard: businesses and recent activity"><img src="images/easyaiengine/01-dashboard.webp" alt="Account dashboard: businesses and recent activity" loading="lazy"></a>
+          <figcaption>Account dashboard: businesses and recent activity</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/easyaiengine/02-business-dashboard.webp" data-caption="A business dashboard"><img src="images/easyaiengine/02-business-dashboard.webp" alt="A business dashboard" loading="lazy"></a>
+          <figcaption>A business dashboard</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/easyaiengine/03-business-analytics.webp" data-caption="Business analytics"><img src="images/easyaiengine/03-business-analytics.webp" alt="Business analytics" loading="lazy"></a>
+          <figcaption>Business analytics</figcaption>
+        </figure></li></ul>
+    </section>
+    <section class="project" id="brightsocial">
+      <header>
+        <h2>Bright Social (my.brightsocial.com)</h2>
+        <span class="meta">Senior developer · technical lead responsibilities since Nov 2019 · 2016-present</span>
+      </header>
+      <p>Social media management for agencies: businesses and profiles, posting schedules and goals, single and multi-post publishing to Facebook, X, LinkedIn, Instagram, Google Business Profile, Reddit and Tumblr, a content engine, calendar, landing pages and lead-gen campaigns.</p>
+      <p class="meta"><strong>Stack:</strong> PHP (CodeIgniter, Laravel), JavaScript, MySQL, Redis, OpenAI</p>
+      <p class="links"><a href="https://my.brightsocial.com">my.brightsocial.com (sign-in)</a></p>
+      
+      
+      <ul class="gallery">
+        <li><figure>
+          <a href="images/brightsocial/01-dashboard.webp" data-caption="Agency dashboard: managed businesses, posting goals and the week&#39;s schedule"><img src="images/brightsocial/01-dashboard.webp" alt="Agency dashboard: managed businesses, posting goals and the week&#39;s schedule" loading="lazy"></a>
+          <figcaption>Agency dashboard: managed businesses, posting goals and the week&#39;s schedule</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/brightsocial/02-content-package.webp" data-caption="Content design: content packages ready to schedule"><img src="images/brightsocial/02-content-package.webp" alt="Content design: content packages ready to schedule" loading="lazy"></a>
+          <figcaption>Content design: content packages ready to schedule</figcaption>
+        </figure></li></ul>
+    </section>
+    <section class="project" id="localanalyzer">
+      <header>
+        <h2>Local Analyzer (app.localanalyzer.com)</h2>
+        <span class="meta">Senior developer · technical lead responsibilities since Nov 2019 · 2016-present</span>
+      </header>
+      <p>Reputation reports: audits a local business&#39;s online presence, listings and reviews and produces a branded, shareable report agencies use to win clients.</p>
+      <p class="meta"><strong>Stack:</strong> PHP (CodeIgniter, Laravel), JavaScript, Vue, MySQL, OpenAI</p>
+      <p class="links"><a href="https://app.localanalyzer.com">app.localanalyzer.com (sign-in)</a><a href="https://repgrader.com/report/Mjc5MDgyLXJlcHJlcG9ydA==?no-view-gate=1">Sample report</a></p>
+      
+      
+      <ul class="gallery">
+        <li><figure>
+          <a href="images/localanalyzer/02-sample-report.webp" data-caption="A generated reputation report"><img src="images/localanalyzer/02-sample-report.webp" alt="A generated reputation report" loading="lazy"></a>
+          <figcaption>A generated reputation report</figcaption>
+        </figure></li></ul>
+    </section>
+    <section class="project" id="funnelpages">
+      <header>
+        <h2>Funnel Pages (my.funnelpages.com)</h2>
+        <span class="meta">Senior developer · technical lead responsibilities since Nov 2019 · 2016-present</span>
+      </header>
+      <p>Funnel and landing page builder: drag-and-drop page builder, funnel dashboards with statistics, blog funnels and white-label hosting on customer domains.</p>
+      <p class="meta"><strong>Stack:</strong> PHP (CodeIgniter, Laravel), JavaScript, Vue, MySQL, Redis, Stripe, Playwright / Puppeteer, OpenAI</p>
+      <p class="links"><a href="https://my.funnelpages.com">my.funnelpages.com (sign-in)</a><a href="https://13125000.funnelpages.com/">Public sample site</a></p>
+      
+      
+      <ul class="gallery">
+        <li><figure>
+          <a href="images/funnelpages/01-funnel-dashboard.webp" data-caption="Funnel dashboard: traffic and conversion statistics"><img src="images/funnelpages/01-funnel-dashboard.webp" alt="Funnel dashboard: traffic and conversion statistics" loading="lazy"></a>
+          <figcaption>Funnel dashboard: traffic and conversion statistics</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/funnelpages/03-funnel-settings.webp" data-caption="Funnel settings: domain, SEO and tracking"><img src="images/funnelpages/03-funnel-settings.webp" alt="Funnel settings: domain, SEO and tracking" loading="lazy"></a>
+          <figcaption>Funnel settings: domain, SEO and tracking</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/funnelpages/04-public-site.webp" data-caption="A published funnel site"><img src="images/funnelpages/04-public-site.webp" alt="A published funnel site" loading="lazy"></a>
+          <figcaption>A published funnel site</figcaption>
+        </figure></li></ul>
+    </section>
+    <section class="project" id="proposal-automator">
+      <header>
+        <h2>Proposal Automator</h2>
+        <span class="meta">2026</span>
+      </header>
+      <p>Chrome extension, API and dashboard that vets freelance jobs, matches portfolio items and drafts tailored proposals, with analytics.</p>
+      <p class="meta"><strong>Stack:</strong> TypeScript, Chrome Extensions, Express, Next.js, PostgreSQL, BullMQ, Claude, OpenAI</p>
+      
+      <p class="note">Demo account with sample data.</p>
+      
+      <ul class="gallery">
+        <li><figure>
+          <a href="images/proposal-automator/01-dashboard.webp" data-caption="Dashboard: proposals, win rate and pending responses"><img src="images/proposal-automator/01-dashboard.webp" alt="Dashboard: proposals, win rate and pending responses" loading="lazy"></a>
+          <figcaption>Dashboard: proposals, win rate and pending responses</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/proposal-automator/02-proposals.webp" data-caption="Proposals with status and client vetting"><img src="images/proposal-automator/02-proposals.webp" alt="Proposals with status and client vetting" loading="lazy"></a>
+          <figcaption>Proposals with status and client vetting</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/proposal-automator/03-projects.webp" data-caption="Portfolio projects matched to jobs"><img src="images/proposal-automator/03-projects.webp" alt="Portfolio projects matched to jobs" loading="lazy"></a>
+          <figcaption>Portfolio projects matched to jobs</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/proposal-automator/04-settings.webp" data-caption="Settings: encrypted API keys and notifications"><img src="images/proposal-automator/04-settings.webp" alt="Settings: encrypted API keys and notifications" loading="lazy"></a>
+          <figcaption>Settings: encrypted API keys and notifications</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/proposal-automator/05-profile-coach.webp" data-caption="Profile Coach: an LLM audit of the freelancer profile"><img src="images/proposal-automator/05-profile-coach.webp" alt="Profile Coach: an LLM audit of the freelancer profile" loading="lazy"></a>
+          <figcaption>Profile Coach: an LLM audit of the freelancer profile</figcaption>
+        </figure></li></ul>
+    </section>
+    <section class="project" id="prompter">
+      <header>
+        <h2>Prompter</h2>
+        <span class="meta">2026</span>
+      </header>
+      <p>macOS app that turns selected code and a spoken request into a polished AI prompt, triggered by a hotkey. Local-first storage, keys in macOS Keychain.</p>
+      <p class="meta"><strong>Stack:</strong> Tauri 2, Rust, React, TypeScript, SQLite, Whisper (local whisper-rs or OpenAI), Claude / OpenAI</p>
+      
+      
+      
+      <ul class="gallery">
+        <li><figure>
+          <a href="images/prompter/01-main.webp" data-caption="Main window: waiting for the Cmd+Shift+P hotkey; history and settings behind the icons"><img src="images/prompter/01-main.webp" alt="Main window: waiting for the Cmd+Shift+P hotkey; history and settings behind the icons" loading="lazy"></a>
+          <figcaption>Main window: waiting for the Cmd+Shift+P hotkey; history and settings behind the icons</figcaption>
+        </figure></li></ul>
+    </section>
+    <section class="project" id="video-context">
+      <header>
+        <h2>Video Context</h2>
+        <span class="meta">2026</span>
+      </header>
+      <p>macOS app and local MCP server that turns recordings into a timestamped transcript, OCR&#39;d screenshots and an evidence-linked coding brief for Claude Code, Codex and Cursor. Read-only by default.</p>
+      <p class="meta"><strong>Stack:</strong> Swift 6, Apple Vision, Whisper, yt-dlp, FFmpeg, MCP (stdio)</p>
+      
+      
+      
+      
+    </section>
+    <section class="project" id="menubarpilot">
+      <header>
+        <h2>MenuBarPilot</h2>
+        <span class="meta">2026</span>
+      </header>
+      <p>Clean-room macOS menu-bar organiser using only public APIs; privacy-first, no telemetry.</p>
+      <p class="meta"><strong>Stack:</strong> Swift, AppKit, SwiftUI, Accessibility APIs</p>
+      
+      
+      
+      <ul class="gallery">
+        <li><figure>
+          <a href="images/menubarpilot/01-settings.webp" data-caption="Settings window"><img src="images/menubarpilot/01-settings.webp" alt="Settings window" loading="lazy"></a>
+          <figcaption>Settings window</figcaption>
+        </figure></li></ul>
+    </section>
+    <section class="project" id="elevenlabs-mcp">
+      <header>
+        <h2>ElevenLabs MCP server</h2>
+        <span class="meta">2025</span>
+      </header>
+      <p>Model Context Protocol server exposing ElevenLabs text-to-speech to AI assistants.</p>
+      <p class="meta"><strong>Stack:</strong> Node.js, MCP, ElevenLabs API, Docker</p>
+      
+      <p class="note">Command-line server, no user interface. Tools: text_to_speech, list_voices, get_voice_info, list_models.</p>
+      
+      
+    </section>
+    <footer>Screenshots taken from development builds with sample data.</footer>
+  </main>
+  <dialog class="lightbox"><img alt=""><p></p></dialog>
+  <script>
+    const box = document.querySelector("dialog.lightbox");
+    const img = box.querySelector("img");
+    const text = box.querySelector("p");
+    for (const link of document.querySelectorAll(".gallery a")) {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        img.src = link.href;
+        img.alt = link.dataset.caption;
+        text.textContent = link.dataset.caption;
+        box.showModal();
+      });
+    }
+    box.addEventListener("click", () => box.close());
+</script>
+</body>
+</html>
