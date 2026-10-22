@@ -74,89 +74,49 @@
       <p>Screenshots and demos of the products I lead at Strategic Marketers, my own products and my developer tools. The employer products are live SaaS apps shown from a staff account; my own tools are on github.com/manshoor. Client work is described in the project portfolio PDF.</p>
     </header>
 
-    <section class="project" id="autobay">
+    <section class="project" id="viralvidz">
       <header>
-        <h2>AutoBay (autobay.io)</h2>
-        <span class="meta">Own product · TuringEdge · pre-launch · 2026</span>
+        <h2>ViralVidz and Adviddy (my.viralvidz.ai)</h2>
+        <span class="meta">Senior developer · technical lead responsibilities since Nov 2019 · 2017-present</span>
       </header>
-      <p>Multi-tenant SaaS ERP for UAE / GCC automotive workshops, heavy equipment and construction logistics: jobs, parts, vendors, invoicing, accounting, banking, HR, attendance, customer portal, white-label, WhatsApp notifications and an AI add-on. Arabic RTL from day one. 25 modules, 120+ tenant tables isolated with PostgreSQL row-level security, 280+ automated test files, release gates and backup and restore checks.</p>
-      <p class="meta"><strong>Stack:</strong> Next.js App Router, Express, TypeScript, Drizzle, PostgreSQL 16, Redis, BullMQ, Stripe Connect, WhatsApp Business API, Prometheus, Grafana, Docker</p>
-      <p class="links"><a href="https://autobay.io">autobay.io</a></p>
-      <p class="note">Dev tenant with sample data; customer names are fictional.</p>
+      <p>Technical lead for Adviddy and its successor ViralVidz: a template and AI video builder used by agencies, producing 2,000–2,800 renders a month; AI script, image and audio generation in production since 2022. Cut render time from 20–30 minutes to about 3 minutes on a GPU server and reduced server load. Led the render-pipeline redesign connecting the PHP builder to the new React editor (Remotion on AWS Lambda): durable, retryable dispatch and ready callbacks; render watchdog and guarded recovery. Led the team that built S3 to CDN delivery, voice cloning and AI voiceover routing, and usage-based credit billing with audit reports.</p>
+      <p class="meta"><strong>Stack:</strong> PHP, JavaScript, MySQL, AWS S3 / CloudFront, FFmpeg, Sentry</p>
+      <p class="links"><a href="https://my.viralvidz.ai/login">my.viralvidz.ai (sign-in)</a><a href="https://my.adviddy.com/login">my.adviddy.com (previous version)</a></p>
+      
       
       <ul class="gallery">
         <li><figure>
-          <a href="images/autobay/01-dashboard.webp" data-caption="Owner dashboard: live jobs, bay utilisation, receivables aging and the sales pipeline"><img src="images/autobay/01-dashboard.webp" alt="Owner dashboard: live jobs, bay utilisation, receivables aging and the sales pipeline" loading="lazy"></a>
-          <figcaption>Owner dashboard: live jobs, bay utilisation, receivables aging and the sales pipeline</figcaption>
+          <a href="images/viralvidz/01-dashboard.webp" data-caption="Dashboard: the user&#39;s video projects and templates"><img src="images/viralvidz/01-dashboard.webp" alt="Dashboard: the user&#39;s video projects and templates" loading="lazy"></a>
+          <figcaption>Dashboard: the user&#39;s video projects and templates</figcaption>
+        </figure></li></ul>
+    </section>
+    <section class="project" id="reactvideoeditor">
+      <header>
+        <h2>React video editor</h2>
+        <span class="meta">Technical lead responsibilities · 2025-present</span>
+      </header>
+      <p>Web video editor with AI-generated content, music, voiceovers and overlays, rendered serverlessly; added Lambda render reporting.</p>
+      <p class="meta"><strong>Stack:</strong> Next.js, React, TypeScript, Remotion (Lambda, Player, Renderer), BullMQ, Redis, Sentry</p>
+      <p class="links"><a href="https://d36dnpyqi3e4p2.cloudfront.net/e4010f3d9b650f0ece12128a3624162c.mp4">Video rendered by the editor (MP4)</a></p>
+      
+      <div class="videos"><video class="video" src="https://d36dnpyqi3e4p2.cloudfront.net/e4010f3d9b650f0ece12128a3624162c.mp4" title="React video editor: Video rendered by the editor (MP4)" controls preload="metadata"></video></div>
+      <ul class="gallery">
+        <li><figure>
+          <a href="images/reactvideoeditor/01-editor.webp" data-caption="The editor: frame timeline, per-frame media settings and effects, and the AI voice-over script"><img src="images/reactvideoeditor/01-editor.webp" alt="The editor: frame timeline, per-frame media settings and effects, and the AI voice-over script" loading="lazy"></a>
+          <figcaption>The editor: frame timeline, per-frame media settings and effects, and the AI voice-over script</figcaption>
         </figure></li>
         <li><figure>
-          <a href="images/autobay/02-dashboard-ar.webp" data-caption="The same dashboard in Arabic: right-to-left layout from day one"><img src="images/autobay/02-dashboard-ar.webp" alt="The same dashboard in Arabic: right-to-left layout from day one" loading="lazy"></a>
-          <figcaption>The same dashboard in Arabic: right-to-left layout from day one</figcaption>
-        </figure></li>
-        <li><figure>
-          <a href="images/autobay/03-jobs.webp" data-caption="Workshop jobs by state, with priority and vehicle"><img src="images/autobay/03-jobs.webp" alt="Workshop jobs by state, with priority and vehicle" loading="lazy"></a>
-          <figcaption>Workshop jobs by state, with priority and vehicle</figcaption>
-        </figure></li>
-        <li><figure>
-          <a href="images/autobay/04-job-detail.webp" data-caption="Job detail"><img src="images/autobay/04-job-detail.webp" alt="Job detail" loading="lazy"></a>
-          <figcaption>Job detail</figcaption>
-        </figure></li>
-        <li><figure>
-          <a href="images/autobay/05-quotes.webp" data-caption="Quotes"><img src="images/autobay/05-quotes.webp" alt="Quotes" loading="lazy"></a>
-          <figcaption>Quotes</figcaption>
-        </figure></li>
-        <li><figure>
-          <a href="images/autobay/06-invoices.webp" data-caption="Invoices and payment status"><img src="images/autobay/06-invoices.webp" alt="Invoices and payment status" loading="lazy"></a>
-          <figcaption>Invoices and payment status</figcaption>
-        </figure></li>
-        <li><figure>
-          <a href="images/autobay/07-invoice-detail.webp" data-caption="Invoice detail"><img src="images/autobay/07-invoice-detail.webp" alt="Invoice detail" loading="lazy"></a>
-          <figcaption>Invoice detail</figcaption>
-        </figure></li>
-        <li><figure>
-          <a href="images/autobay/08-customers.webp" data-caption="Customers and their vehicles"><img src="images/autobay/08-customers.webp" alt="Customers and their vehicles" loading="lazy"></a>
-          <figcaption>Customers and their vehicles</figcaption>
-        </figure></li>
-        <li><figure>
-          <a href="images/autobay/09-parts.webp" data-caption="Parts"><img src="images/autobay/09-parts.webp" alt="Parts" loading="lazy"></a>
-          <figcaption>Parts</figcaption>
-        </figure></li>
-        <li><figure>
-          <a href="images/autobay/10-accounting.webp" data-caption="Double-entry accounting: journal entries"><img src="images/autobay/10-accounting.webp" alt="Double-entry accounting: journal entries" loading="lazy"></a>
-          <figcaption>Double-entry accounting: journal entries</figcaption>
-        </figure></li>
-        <li><figure>
-          <a href="images/autobay/11-banking.webp" data-caption="Bank accounts and reconciliation"><img src="images/autobay/11-banking.webp" alt="Bank accounts and reconciliation" loading="lazy"></a>
-          <figcaption>Bank accounts and reconciliation</figcaption>
-        </figure></li>
-        <li><figure>
-          <a href="images/autobay/12-attendance.webp" data-caption="Attendance records from biometric and geo-fenced check-ins"><img src="images/autobay/12-attendance.webp" alt="Attendance records from biometric and geo-fenced check-ins" loading="lazy"></a>
-          <figcaption>Attendance records from biometric and geo-fenced check-ins</figcaption>
-        </figure></li>
-        <li><figure>
-          <a href="images/autobay/13-equipment.webp" data-caption="Heavy equipment fleet and bookings"><img src="images/autobay/13-equipment.webp" alt="Heavy equipment fleet and bookings" loading="lazy"></a>
-          <figcaption>Heavy equipment fleet and bookings</figcaption>
-        </figure></li>
-        <li><figure>
-          <a href="images/autobay/14-hr.webp" data-caption="HR and payroll: employees"><img src="images/autobay/14-hr.webp" alt="HR and payroll: employees" loading="lazy"></a>
-          <figcaption>HR and payroll: employees</figcaption>
-        </figure></li>
-        <li><figure>
-          <a href="images/autobay/15-settings.webp" data-caption="Tenant settings and white-label branding"><img src="images/autobay/15-settings.webp" alt="Tenant settings and white-label branding" loading="lazy"></a>
-          <figcaption>Tenant settings and white-label branding</figcaption>
-        </figure></li>
-        <li><figure>
-          <a href="images/autobay/16-technician-mobile.webp" data-caption="Mechanic&#39;s mobile view: assigned jobs"><img src="images/autobay/16-technician-mobile.webp" alt="Mechanic&#39;s mobile view: assigned jobs" loading="lazy"></a>
-          <figcaption>Mechanic&#39;s mobile view: assigned jobs</figcaption>
+          <a href="images/reactvideoeditor/02-create-media.webp" data-caption="Create Media: text-to-image, blend, image-to-video and text-to-video for a frame"><img src="images/reactvideoeditor/02-create-media.webp" alt="Create Media: text-to-image, blend, image-to-video and text-to-video for a frame" loading="lazy"></a>
+          <figcaption>Create Media: text-to-image, blend, image-to-video and text-to-video for a frame</figcaption>
         </figure></li></ul>
     </section>
     <section class="project" id="ideolab">
       <header>
         <h2>IdeoLab (my.ideolab.ai)</h2>
-        <span class="meta">Engineer · 2026</span>
+        <span class="meta">Technical lead, internal team · 2025-present</span>
       </header>
-      <p>Chat-driven platform where a business builds labs: canvases that turn a brand profile, reference videos and chats into studios for social posts, images and photo shoots, AI avatar videos, slides, mind maps, landing pages and sites. Workflow Studio with triggers, routers and 20+ OAuth2 / API-key integrations (Slack, Twilio, Stripe, Apify, OpenAI, Gemini); a social calendar that schedules and auto-publishes to Instagram, Facebook, TikTok, YouTube and X; ALYX, an analytics agent. Built versioned prompt releases and structured Planner / Builder LLM contracts with validation and repair flows, and the calendar model evaluation: fixed acceptance criteria and no-go gates, an in-process harness, cross-model judging with seeded defects and cost metering.</p>
-      <p class="meta"><strong>Stack:</strong> LangChain, LangGraph, OpenAI, Claude, Gemini, xAI, fal.ai, ElevenLabs, Qdrant (RAG), RabbitMQ workers, Langfuse, Express, React, Supabase, AWS S3</p>
+      <p>Chat-driven platform where a business builds labs: canvases that turn a brand profile, reference videos and chats into studios for social posts, images, AI avatar videos, slides, mind maps and sites; Workflow Studio with triggers, routers and 20+ integrations; a social calendar auto-publishing to five networks; ALYX, an analytics agent. Led the internal team&#39;s AI quality work: a 718-prompt versioned registry with drift checks before merge, Planner / Builder LLM contracts, golden datasets, LLM-as-judge scoring, regression suites gating prompt releases, Langfuse observability, and the calendar model evaluation with no-go criteria fixed before any paid run, seeded defects and cost metering.</p>
+      <p class="meta"><strong>Stack:</strong> LangChain, LangGraph, OpenAI, Claude, Gemini, fal.ai, Qdrant (RAG), RabbitMQ, Langfuse, React, Supabase, S3</p>
       <p class="links"><a href="https://my.ideolab.ai">my.ideolab.ai</a><a href="https://www.youtube.com/shorts/LAXEhuVlIiM">Sample video made in IdeoLab (YouTube Short)</a></p>
       
       <div class="videos"><iframe class="video short" src="https://www.youtube.com/embed/LAXEhuVlIiM" title="IdeoLab (my.ideolab.ai): Sample video made in IdeoLab (YouTube Short)" allowfullscreen loading="lazy"></iframe></div>
@@ -254,42 +214,6 @@
           <figcaption>Social connections: the channels the business publishes to</figcaption>
         </figure></li></ul>
     </section>
-    <section class="project" id="viralvidz">
-      <header>
-        <h2>ViralVidz and Adviddy (my.viralvidz.ai)</h2>
-        <span class="meta">Senior developer · technical lead responsibilities since Nov 2019 · 2017-present</span>
-      </header>
-      <p>Technical lead for Adviddy and its successor ViralVidz: a template and AI video builder used by agencies, producing 2,000–2,800 renders a month. Cut render time from 20–30 minutes to about 3 minutes on a GPU server and reduced server load. Led the render-pipeline redesign connecting the PHP builder to the new React editor (Remotion on AWS Lambda): durable, retryable dispatch and ready callbacks; render watchdog and guarded recovery. Led the team that built S3 to CDN delivery, voice cloning and AI voiceover routing, and usage-based credit billing with audit reports.</p>
-      <p class="meta"><strong>Stack:</strong> PHP, JavaScript, MySQL, AWS S3 / CloudFront, FFmpeg, Sentry</p>
-      <p class="links"><a href="https://my.viralvidz.ai/login">my.viralvidz.ai (sign-in)</a><a href="https://my.adviddy.com/login">my.adviddy.com (previous version)</a></p>
-      
-      
-      <ul class="gallery">
-        <li><figure>
-          <a href="images/viralvidz/01-dashboard.webp" data-caption="Dashboard: the user&#39;s video projects and templates"><img src="images/viralvidz/01-dashboard.webp" alt="Dashboard: the user&#39;s video projects and templates" loading="lazy"></a>
-          <figcaption>Dashboard: the user&#39;s video projects and templates</figcaption>
-        </figure></li></ul>
-    </section>
-    <section class="project" id="reactvideoeditor">
-      <header>
-        <h2>React video editor</h2>
-        <span class="meta">Technical lead responsibilities · 2025-present</span>
-      </header>
-      <p>Web video editor with AI-generated content, music, voiceovers and overlays, rendered serverlessly; added Lambda render reporting.</p>
-      <p class="meta"><strong>Stack:</strong> Next.js, React, TypeScript, Remotion (Lambda, Player, Renderer), BullMQ, Redis, Sentry</p>
-      <p class="links"><a href="https://vidkahuna-videos.s3.amazonaws.com/e4010f3d9b650f0ece12128a3624162c.mp4">Video rendered by the editor (MP4)</a></p>
-      
-      <div class="videos"><video class="video" src="https://vidkahuna-videos.s3.amazonaws.com/e4010f3d9b650f0ece12128a3624162c.mp4" title="React video editor: Video rendered by the editor (MP4)" controls preload="metadata"></video></div>
-      <ul class="gallery">
-        <li><figure>
-          <a href="images/reactvideoeditor/01-editor.webp" data-caption="The editor: frame timeline, per-frame media settings and effects, and the AI voice-over script"><img src="images/reactvideoeditor/01-editor.webp" alt="The editor: frame timeline, per-frame media settings and effects, and the AI voice-over script" loading="lazy"></a>
-          <figcaption>The editor: frame timeline, per-frame media settings and effects, and the AI voice-over script</figcaption>
-        </figure></li>
-        <li><figure>
-          <a href="images/reactvideoeditor/02-create-media.webp" data-caption="Create Media: text-to-image, blend, image-to-video and text-to-video for a frame"><img src="images/reactvideoeditor/02-create-media.webp" alt="Create Media: text-to-image, blend, image-to-video and text-to-video for a frame" loading="lazy"></a>
-          <figcaption>Create Media: text-to-image, blend, image-to-video and text-to-video for a frame</figcaption>
-        </figure></li></ul>
-    </section>
     <section class="project" id="easyaiengine">
       <header>
         <h2>Easy AI Engine (my.easyaiengine.com)</h2>
@@ -372,6 +296,82 @@
         <li><figure>
           <a href="images/funnelpages/04-public-site.webp" data-caption="A published funnel site"><img src="images/funnelpages/04-public-site.webp" alt="A published funnel site" loading="lazy"></a>
           <figcaption>A published funnel site</figcaption>
+        </figure></li></ul>
+    </section>
+    <section class="project" id="autobay">
+      <header>
+        <h2>AutoBay (autobay.io)</h2>
+        <span class="meta">Own product · TuringEdge · pre-launch · 2026</span>
+      </header>
+      <p>Multi-tenant SaaS ERP for UAE / GCC automotive workshops and heavy equipment: jobs, parts, vendors, invoicing, accounting, banking, HR, attendance, customer portal, white-label, WhatsApp notifications and an AI add-on. Arabic RTL from day one. 25 modules, 120+ tenant tables isolated with PostgreSQL row-level security, 280+ automated test files, release gates and backup checks.</p>
+      <p class="meta"><strong>Stack:</strong> Next.js, Express, TypeScript, Drizzle, PostgreSQL 16, Redis, BullMQ, Stripe Connect, WhatsApp API, Prometheus, Docker</p>
+      <p class="links"><a href="https://autobay.io">autobay.io</a></p>
+      <p class="note">Dev tenant with sample data; customer names are fictional.</p>
+      
+      <ul class="gallery">
+        <li><figure>
+          <a href="images/autobay/01-dashboard.webp" data-caption="Owner dashboard: live jobs, bay utilisation, receivables aging and the sales pipeline"><img src="images/autobay/01-dashboard.webp" alt="Owner dashboard: live jobs, bay utilisation, receivables aging and the sales pipeline" loading="lazy"></a>
+          <figcaption>Owner dashboard: live jobs, bay utilisation, receivables aging and the sales pipeline</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/02-dashboard-ar.webp" data-caption="The same dashboard in Arabic: right-to-left layout from day one"><img src="images/autobay/02-dashboard-ar.webp" alt="The same dashboard in Arabic: right-to-left layout from day one" loading="lazy"></a>
+          <figcaption>The same dashboard in Arabic: right-to-left layout from day one</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/03-jobs.webp" data-caption="Workshop jobs by state, with priority and vehicle"><img src="images/autobay/03-jobs.webp" alt="Workshop jobs by state, with priority and vehicle" loading="lazy"></a>
+          <figcaption>Workshop jobs by state, with priority and vehicle</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/04-job-detail.webp" data-caption="Job detail"><img src="images/autobay/04-job-detail.webp" alt="Job detail" loading="lazy"></a>
+          <figcaption>Job detail</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/05-quotes.webp" data-caption="Quotes"><img src="images/autobay/05-quotes.webp" alt="Quotes" loading="lazy"></a>
+          <figcaption>Quotes</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/06-invoices.webp" data-caption="Invoices and payment status"><img src="images/autobay/06-invoices.webp" alt="Invoices and payment status" loading="lazy"></a>
+          <figcaption>Invoices and payment status</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/07-invoice-detail.webp" data-caption="Invoice detail"><img src="images/autobay/07-invoice-detail.webp" alt="Invoice detail" loading="lazy"></a>
+          <figcaption>Invoice detail</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/08-customers.webp" data-caption="Customers and their vehicles"><img src="images/autobay/08-customers.webp" alt="Customers and their vehicles" loading="lazy"></a>
+          <figcaption>Customers and their vehicles</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/09-parts.webp" data-caption="Parts"><img src="images/autobay/09-parts.webp" alt="Parts" loading="lazy"></a>
+          <figcaption>Parts</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/10-accounting.webp" data-caption="Double-entry accounting: journal entries"><img src="images/autobay/10-accounting.webp" alt="Double-entry accounting: journal entries" loading="lazy"></a>
+          <figcaption>Double-entry accounting: journal entries</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/11-banking.webp" data-caption="Bank accounts and reconciliation"><img src="images/autobay/11-banking.webp" alt="Bank accounts and reconciliation" loading="lazy"></a>
+          <figcaption>Bank accounts and reconciliation</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/12-attendance.webp" data-caption="Attendance records from biometric and geo-fenced check-ins"><img src="images/autobay/12-attendance.webp" alt="Attendance records from biometric and geo-fenced check-ins" loading="lazy"></a>
+          <figcaption>Attendance records from biometric and geo-fenced check-ins</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/13-equipment.webp" data-caption="Heavy equipment fleet and bookings"><img src="images/autobay/13-equipment.webp" alt="Heavy equipment fleet and bookings" loading="lazy"></a>
+          <figcaption>Heavy equipment fleet and bookings</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/14-hr.webp" data-caption="HR and payroll: employees"><img src="images/autobay/14-hr.webp" alt="HR and payroll: employees" loading="lazy"></a>
+          <figcaption>HR and payroll: employees</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/15-settings.webp" data-caption="Tenant settings and white-label branding"><img src="images/autobay/15-settings.webp" alt="Tenant settings and white-label branding" loading="lazy"></a>
+          <figcaption>Tenant settings and white-label branding</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/autobay/16-technician-mobile.webp" data-caption="Mechanic&#39;s mobile view: assigned jobs"><img src="images/autobay/16-technician-mobile.webp" alt="Mechanic&#39;s mobile view: assigned jobs" loading="lazy"></a>
+          <figcaption>Mechanic&#39;s mobile view: assigned jobs</figcaption>
         </figure></li></ul>
     </section>
     <section class="project" id="proposal-automator">
