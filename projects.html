@@ -155,8 +155,8 @@
         <h2>IdeoLab (my.ideolab.ai)</h2>
         <span class="meta">Engineer · 2026</span>
       </header>
-      <p>Chat-driven platform that creates images, videos, presentations and social calendars. Built versioned prompt releases and structured Planner / Builder LLM contracts with validation and repair flows.</p>
-      <p class="meta"><strong>Stack:</strong> LangChain, LangGraph, Claude, Gemini, xAI, fal.ai, Qdrant vector search (RAG), RabbitMQ workers, Express, React, Supabase, AWS S3</p>
+      <p>Chat-driven platform where a business builds labs: canvases that turn a brand profile, reference videos and chats into studios for social posts, images and photo shoots, AI avatar videos, slides, mind maps, landing pages and sites. Workflow Studio with triggers, routers and 20+ OAuth2 / API-key integrations (Slack, Twilio, Stripe, Apify, OpenAI, Gemini); a social calendar that schedules and auto-publishes to Instagram, Facebook, TikTok, YouTube and X; ALYX, an analytics agent. Built versioned prompt releases and structured Planner / Builder LLM contracts with validation and repair flows, and the calendar model evaluation: fixed acceptance criteria and no-go gates, an in-process harness, cross-model judging with seeded defects and cost metering.</p>
+      <p class="meta"><strong>Stack:</strong> LangChain, LangGraph, OpenAI, Claude, Gemini, xAI, fal.ai, ElevenLabs, Qdrant (RAG), RabbitMQ workers, Langfuse, Express, React, Supabase, AWS S3</p>
       <p class="links"><a href="https://my.ideolab.ai">my.ideolab.ai</a><a href="https://www.youtube.com/shorts/LAXEhuVlIiM">Sample video made in IdeoLab (YouTube Short)</a></p>
       
       <div class="videos"><iframe class="video short" src="https://www.youtube.com/embed/LAXEhuVlIiM" title="IdeoLab (my.ideolab.ai): Sample video made in IdeoLab (YouTube Short)" allowfullscreen loading="lazy"></iframe></div>
@@ -166,11 +166,91 @@
           <figcaption>Home: start a chat, or pick a ready-made lab or automation</figcaption>
         </figure></li>
         <li><figure>
-          <a href="images/ideolab/03-website-builder.webp" data-caption="Website builder preview: a site generated for a sample business"><img src="images/ideolab/03-website-builder.webp" alt="Website builder preview: a site generated for a sample business" loading="lazy"></a>
+          <a href="images/ideolab/02-lab-viral-social.webp" data-caption="A lab canvas: brand profile, reference videos and chats feeding a social post studio"><img src="images/ideolab/02-lab-viral-social.webp" alt="A lab canvas: brand profile, reference videos and chats feeding a social post studio" loading="lazy"></a>
+          <figcaption>A lab canvas: brand profile, reference videos and chats feeding a social post studio</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/03-lab-pizza-guy.webp" data-caption="A lab with several chats, each producing a studio: pages, images, a photo-shoot gallery"><img src="images/ideolab/03-lab-pizza-guy.webp" alt="A lab with several chats, each producing a studio: pages, images, a photo-shoot gallery" loading="lazy"></a>
+          <figcaption>A lab with several chats, each producing a studio: pages, images, a photo-shoot gallery</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/04-lab-product-launch.webp" data-caption="A lab assembling a product launch: research, photos, product sheet, slides and a mind map"><img src="images/ideolab/04-lab-product-launch.webp" alt="A lab assembling a product launch: research, photos, product sheet, slides and a mind map" loading="lazy"></a>
+          <figcaption>A lab assembling a product launch: research, photos, product sheet, slides and a mind map</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/05-lab-imported.webp" data-caption="An imported lab: chats, documents, campaign pages and generated assets on one canvas"><img src="images/ideolab/05-lab-imported.webp" alt="An imported lab: chats, documents, campaign pages and generated assets on one canvas" loading="lazy"></a>
+          <figcaption>An imported lab: chats, documents, campaign pages and generated assets on one canvas</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/06-workflow-templates.webp" data-caption="Workflow templates: lead handling, SMS reply handling, no-show detection, voice-call agents"><img src="images/ideolab/06-workflow-templates.webp" alt="Workflow templates: lead handling, SMS reply handling, no-show detection, voice-call agents" loading="lazy"></a>
+          <figcaption>Workflow templates: lead handling, SMS reply handling, no-show detection, voice-call agents</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/07-workflow-studio.webp" data-caption="Workflow Studio: a Slack trigger, an IdeoLab image step and an email step, with the AI guide"><img src="images/ideolab/07-workflow-studio.webp" alt="Workflow Studio: a Slack trigger, an IdeoLab image step and an email step, with the AI guide" loading="lazy"></a>
+          <figcaption>Workflow Studio: a Slack trigger, an IdeoLab image step and an email step, with the AI guide</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/08-workflow-runs.webp" data-caption="A scheduled workflow (HTTP, ChatGPT, Slack) with its daily run history"><img src="images/ideolab/08-workflow-runs.webp" alt="A scheduled workflow (HTTP, ChatGPT, Slack) with its daily run history" loading="lazy"></a>
+          <figcaption>A scheduled workflow (HTTP, ChatGPT, Slack) with its daily run history</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/09-workflow-apify-step.webp" data-caption="Configuring a step: an Apify actor with JSON input, before an LLM step and a social post step"><img src="images/ideolab/09-workflow-apify-step.webp" alt="Configuring a step: an Apify actor with JSON input, before an LLM step and a social post step" loading="lazy"></a>
+          <figcaption>Configuring a step: an Apify actor with JSON input, before an LLM step and a social post step</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/10-workflow-sms-reply-handler.webp" data-caption="A 21-step workflow: Twilio SMS in, AI classification, routing, records and Slack alerts"><img src="images/ideolab/10-workflow-sms-reply-handler.webp" alt="A 21-step workflow: Twilio SMS in, AI classification, routing, records and Slack alerts" loading="lazy"></a>
+          <figcaption>A 21-step workflow: Twilio SMS in, AI classification, routing, records and Slack alerts</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/11-integrations.webp" data-caption="Integrations: OAuth2 and API-key connectors for Slack, OpenAI, Stripe, Twilio, Gemini, Apify and more"><img src="images/ideolab/11-integrations.webp" alt="Integrations: OAuth2 and API-key connectors for Slack, OpenAI, Stripe, Twilio, Gemini, Apify and more" loading="lazy"></a>
+          <figcaption>Integrations: OAuth2 and API-key connectors for Slack, OpenAI, Stripe, Twilio, Gemini, Apify and more</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/12-social-library.webp" data-caption="Social studio: generated posts with images for a business"><img src="images/ideolab/12-social-library.webp" alt="Social studio: generated posts with images for a business" loading="lazy"></a>
+          <figcaption>Social studio: generated posts with images for a business</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/13-social-published.webp" data-caption="Published timeline: 153 posts scheduled to Instagram and Facebook"><img src="images/ideolab/13-social-published.webp" alt="Published timeline: 153 posts scheduled to Instagram and Facebook" loading="lazy"></a>
+          <figcaption>Published timeline: 153 posts scheduled to Instagram and Facebook</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/14-social-calendar.webp" data-caption="Content calendar: the month&#39;s scheduled and posted content"><img src="images/ideolab/14-social-calendar.webp" alt="Content calendar: the month&#39;s scheduled and posted content" loading="lazy"></a>
+          <figcaption>Content calendar: the month&#39;s scheduled and posted content</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/15-publish-setup.webp" data-caption="Publish setup: profiles, posting days, time window and weekly pace"><img src="images/ideolab/15-publish-setup.webp" alt="Publish setup: profiles, posting days, time window and weekly pace" loading="lazy"></a>
+          <figcaption>Publish setup: profiles, posting days, time window and weekly pace</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/16-video-library.webp" data-caption="Video studio: AI avatar videos generated for a business"><img src="images/ideolab/16-video-library.webp" alt="Video studio: AI avatar videos generated for a business" loading="lazy"></a>
+          <figcaption>Video studio: AI avatar videos generated for a business</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/17-video-studio.webp" data-caption="A produced 9:16 video with its title, description, tags and thumbnail"><img src="images/ideolab/17-video-studio.webp" alt="A produced 9:16 video with its title, description, tags and thumbnail" loading="lazy"></a>
+          <figcaption>A produced 9:16 video with its title, description, tags and thumbnail</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/18-video-analytics.webp" data-caption="Video analytics with ALYX, the analytics agent, summarising performance across platforms"><img src="images/ideolab/18-video-analytics.webp" alt="Video analytics with ALYX, the analytics agent, summarising performance across platforms" loading="lazy"></a>
+          <figcaption>Video analytics with ALYX, the analytics agent, summarising performance across platforms</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/19-video-analytics-platforms.webp" data-caption="Analytics by platform: results by publish date and YouTube Shorts metrics"><img src="images/ideolab/19-video-analytics-platforms.webp" alt="Analytics by platform: results by publish date and YouTube Shorts metrics" loading="lazy"></a>
+          <figcaption>Analytics by platform: results by publish date and YouTube Shorts metrics</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/20-image-library.webp" data-caption="Image studio: a photo-shoot series generated for a client"><img src="images/ideolab/20-image-library.webp" alt="Image studio: a photo-shoot series generated for a client" loading="lazy"></a>
+          <figcaption>Image studio: a photo-shoot series generated for a client</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/21-page-builder.webp" data-caption="Site builder: landing pages, lead pages and brand sites generated from a description"><img src="images/ideolab/21-page-builder.webp" alt="Site builder: landing pages, lead pages and brand sites generated from a description" loading="lazy"></a>
+          <figcaption>Site builder: landing pages, lead pages and brand sites generated from a description</figcaption>
+        </figure></li>
+        <li><figure>
+          <a href="images/ideolab/22-website-builder.webp" data-caption="Website builder preview: a site generated for a sample business"><img src="images/ideolab/22-website-builder.webp" alt="Website builder preview: a site generated for a sample business" loading="lazy"></a>
           <figcaption>Website builder preview: a site generated for a sample business</figcaption>
         </figure></li>
         <li><figure>
-          <a href="images/ideolab/04-social-connections.webp" data-caption="Social connections: the channels the business publishes to"><img src="images/ideolab/04-social-connections.webp" alt="Social connections: the channels the business publishes to" loading="lazy"></a>
+          <a href="images/ideolab/23-social-connections.webp" data-caption="Social connections: the channels the business publishes to"><img src="images/ideolab/23-social-connections.webp" alt="Social connections: the channels the business publishes to" loading="lazy"></a>
           <figcaption>Social connections: the channels the business publishes to</figcaption>
         </figure></li></ul>
     </section>
