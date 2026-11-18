@@ -374,6 +374,42 @@
           <figcaption>Mechanic&#39;s mobile view: assigned jobs</figcaption>
         </figure></li></ul>
     </section>
+    <section class="project" id="secure-rag">
+      <header>
+        <h2>Secure RAG</h2>
+        <span class="meta">2026</span>
+      </header>
+      <p>Staff Q&amp;A over company documents with cited answers; role-based access enforced inside retrieval, prompt-injection screening, human approval for sensitive agent actions, audit log. Eval: 17/17, 0 leaks.</p>
+      <p class="meta"><strong>Stack:</strong> Python, FastAPI, LangGraph, Qdrant, BM25, PostgreSQL, Langfuse, Claude, Docker</p>
+      
+      <p class="note">Code: github.com/manshoor/secure-rag. Runs from the command line and a FastAPI API; no screenshots yet.</p>
+      
+      
+    </section>
+    <section class="project" id="fastapi-ai-agent-platform">
+      <header>
+        <h2>FastAPI AI agent platform</h2>
+        <span class="meta">2026</span>
+      </header>
+      <p>Async API with accounts, PostgreSQL and Redis caching; a Kafka outbox and workers run OpenAI jobs with bounded retries; OpenTelemetry tracing. Local load test: 2,500 users, 470,507 requests, zero failures, p95 20 ms.</p>
+      <p class="meta"><strong>Stack:</strong> Python, FastAPI, async SQLAlchemy, PostgreSQL, Redis, Kafka, OpenAI, OpenTelemetry, Locust, Docker</p>
+      
+      <p class="note">Code: github.com/manshoor/fastapi-ai-agent-platform. API only, with OpenAPI docs; no user interface.</p>
+      
+      
+    </section>
+    <section class="project" id="boq-assistant">
+      <header>
+        <h2>BOQ Assistant</h2>
+        <span class="meta">2026</span>
+      </header>
+      <p>Checks construction bills of quantities and drafts the query letter: Claude reads the sheets, code checks every number, a named person approves, nothing is sent. Every model call is logged with its cost.</p>
+      <p class="meta"><strong>Stack:</strong> Python, FastAPI, Claude, openpyxl, PyMuPDF</p>
+      
+      <p class="note">Code: github.com/manshoor/boq-assistant. Demo with invented sample workbooks; no screenshots yet.</p>
+      
+      
+    </section>
     <section class="project" id="proposal-automator">
       <header>
         <h2>Proposal Automator</h2>
@@ -449,18 +485,6 @@
           <a href="images/menubarpilot/01-settings.webp" data-caption="Settings window"><img src="images/menubarpilot/01-settings.webp" alt="Settings window" loading="lazy"></a>
           <figcaption>Settings window</figcaption>
         </figure></li></ul>
-    </section>
-    <section class="project" id="elevenlabs-mcp">
-      <header>
-        <h2>ElevenLabs MCP server</h2>
-        <span class="meta">2025</span>
-      </header>
-      <p>Model Context Protocol server exposing ElevenLabs text-to-speech to AI assistants.</p>
-      <p class="meta"><strong>Stack:</strong> Node.js, MCP, ElevenLabs API, Docker</p>
-      
-      <p class="note">Command-line server, no user interface. Tools: text_to_speech, list_voices, get_voice_info, list_models.</p>
-      
-      
     </section>
     <footer>Screenshots taken from development builds with sample data.</footer>
   </main>
