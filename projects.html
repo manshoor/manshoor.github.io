@@ -379,8 +379,8 @@
         <h2>Secure RAG</h2>
         <span class="meta">2026</span>
       </header>
-      <p>Staff Q&amp;A over company documents with cited answers; role-based access enforced inside retrieval, prompt-injection screening, human approval for sensitive agent actions, audit log. Eval: 17/17, 0 leaks.</p>
-      <p class="meta"><strong>Stack:</strong> Python, FastAPI, LangGraph, Qdrant, BM25, PostgreSQL, Langfuse, Claude, Docker</p>
+      <p>Staff Q&amp;A over company documents with cited answers; role-based access inside retrieval, injection screening, grounding checks. A LangGraph workflow runs requests and BOQs through approval gates. Eval: 19/20, 0 leaks.</p>
+      <p class="meta"><strong>Stack:</strong> Python, FastAPI, LangGraph, Qdrant, BM25, PostgreSQL, Claude, Langfuse, LangSmith, Docker</p>
       
       <p class="note">Code: github.com/manshoor/secure-rag. Runs from the command line and a FastAPI API; no screenshots yet.</p>
       
@@ -391,22 +391,22 @@
         <h2>FastAPI AI agent platform</h2>
         <span class="meta">2026</span>
       </header>
-      <p>Async API with accounts, PostgreSQL and Redis caching; a Kafka outbox and workers run OpenAI jobs with bounded retries; OpenTelemetry tracing. Local load test: 2,500 users, 470,507 requests, zero failures, p95 20 ms.</p>
-      <p class="meta"><strong>Stack:</strong> Python, FastAPI, async SQLAlchemy, PostgreSQL, Redis, Kafka, OpenAI, OpenTelemetry, Langfuse, LangSmith, Locust, Docker</p>
+      <p>Async API with Redis caching and Kafka and SQS workers; pgvector RAG (Word, HTML, OCR) with a knowledge graph; a LangGraph assistant with TOTP step-up. Local load test: 2,500 users, zero failures, p95 20 ms.</p>
+      <p class="meta"><strong>Stack:</strong> Python, FastAPI, async SQLAlchemy, PostgreSQL, pgvector, Redis, Kafka, SQS, LangGraph, OpenAI, OpenTelemetry, Docker</p>
       
       <p class="note">Code: github.com/manshoor/fastapi-ai-agent-platform. API only, with OpenAPI docs; no user interface.</p>
       
       
     </section>
-    <section class="project" id="boq-assistant">
+    <section class="project" id="langchain-claude">
       <header>
-        <h2>BOQ Assistant</h2>
+        <h2>LangChain support bot</h2>
         <span class="meta">2026</span>
       </header>
-      <p>Checks construction bills of quantities and drafts the query letter: Claude reads the sheets, code checks every number, a named person approves, nothing is sent. Every model call is logged with its cost.</p>
-      <p class="meta"><strong>Stack:</strong> Python, FastAPI, Claude, openpyxl, PyMuPDF</p>
+      <p>Answers customers from policy documents with citations, remembers each customer, hands off to a human; a multi-model LangGraph workflow is measured against one agent. Retrieval eval: 24 questions, hit@1 0.96.</p>
+      <p class="meta"><strong>Stack:</strong> Python, LangChain, LangGraph, Claude (Opus, Sonnet, Haiku), fastembed, BM25, SQLite, Langfuse, GitHub Actions</p>
       
-      <p class="note">Code: github.com/manshoor/boq-assistant. Demo with invented sample workbooks; no screenshots yet.</p>
+      <p class="note">Code: github.com/manshoor/langchain-claude. Command-line scripts and evals; no screenshots yet.</p>
       
       
     </section>
